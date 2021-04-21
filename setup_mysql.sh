@@ -1,0 +1,16 @@
+#!/bin/bash
+# create the new database "verwaltung"
+echo -e "Creating the new database verwaltung\n"
+mysql -h localhost -u root < database/create_database.sql
+# create a new user "pyuser" and set the permissions
+echo -e "Creating a new user pyuser\n"
+mysql -h localhost -u root < database/setup_permissions.sql
+# create the tables
+declare -i I=1
+MAX=$(ls "database/ddl/" | wc -l)
+for SCRIPT in database/ddl/*.sql
+do
+  echo -e "Executing script (${I}/${MAX}): ${SCRIPT}\n"
+  mysql -h localhost -u root < $SCRIPT
+  I=$I+1
+done
