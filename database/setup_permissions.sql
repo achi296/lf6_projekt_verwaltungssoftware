@@ -1,0 +1,1 @@
+GRANT ALL PRIVILEGES ON verwaltung.* TO 'pyuser'@'localhost';
