@@ -17,6 +17,7 @@ class MainWindow(QMainWindow):
         """
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setWindowTitle("Verwaltungsprogramm")
+        self.setFixedSize(350, 350)
 
 
 def main():
