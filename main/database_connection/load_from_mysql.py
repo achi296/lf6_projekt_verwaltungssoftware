@@ -1,5 +1,6 @@
 import json
 import mysql.connector as mysql
+import pandas as pd
 
 
 class LoadFromMySQL:
@@ -40,3 +41,6 @@ class LoadFromMySQL:
 
     def close_connection(self):
         self.__conn.close()
+
+    def get_data_frame_from_table(self, table_name: str) -> pd.DataFrame:
+        return pd.read_sql_table(table_name, self.__conn)
