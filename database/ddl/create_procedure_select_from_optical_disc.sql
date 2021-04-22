@@ -12,4 +12,3 @@ SELECT
     item_created
 FROM optical_discs ;
 
-
