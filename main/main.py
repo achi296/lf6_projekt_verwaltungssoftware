@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 class MainWindow(QMainWindow):
     """
     This is the root class of the whole project.
-    The class inherits the attributes and functions form the QMainWindow class which is part of the module PyQt5.
+    The class inherits the attributes and functions from the QMainWindow class which is part of the module PyQt5.
     """
 
     def __init__(self, *args, **kwargs):
